@@ -7,6 +7,9 @@ os:
 compiler:
   - clang
   - gcc
+env:
+  - EXTRA_WARNING=""
+  - EXTRA_WARNING="--enable-werror"
 
 matrix:
   exclude:
@@ -27,7 +30,7 @@ before_script:
 #  - lcov --directory . --zerocounters
 
 script:
-  - ./configure
+  - ./configure ${EXTRA_WARNING}
   - make
 
 after_script:
