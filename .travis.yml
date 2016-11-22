@@ -23,7 +23,7 @@ install:
 #linux
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get update || true; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install build-essential; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install libpcap-dev libtool autoconf automake autogen; fi 
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install libpcap-dev libtool autoconf automake autogen libjson-c-dev; fi
 
 before_script:
   - ./autogen.sh
