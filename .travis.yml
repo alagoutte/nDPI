@@ -4,6 +4,9 @@ os:
   - osx
   - linux
 
+sudo: required
+dist: trusty
+
 compiler:
   - clang
   - gcc
